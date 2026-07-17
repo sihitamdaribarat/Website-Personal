@@ -16,7 +16,7 @@ export default function ConfidantProfile() {
       
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20 z-0 pointer-events-none"
-        style={{ backgroundImage: `url('/persona-5.jpg')` }}
+        style={{ backgroundImage: `url('${import.meta.env.BASE_URL}persona-5.jpg')` }}
       />
 
       {/* Background slash details */}

@@ -45,7 +45,7 @@ export default function Hero() {
       {/* Background Star Wallpaper from user's image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-30 z-0 pointer-events-none"
-        style={{ backgroundImage: `url('/bg_wallpaper.jpg')` }}
+        style={{ backgroundImage: `url('${import.meta.env.BASE_URL}bg_wallpaper.jpg')` }}
       />
 
       {/* Red Jagged Background Slash */}
@@ -137,7 +137,7 @@ export default function Hero() {
             className="absolute w-full h-full pointer-events-none select-none overflow-visible flex justify-center items-center"
           >
             <img 
-              src="/joker.png" 
+              src={`${import.meta.env.BASE_URL}joker.png`} 
               alt="Joker Shadow" 
               className="w-[90%] h-full object-contain filter brightness-0 sepia(1) saturate(100) hue-rotate(350deg) opacity-90 scale-105"
             />
@@ -151,7 +151,7 @@ export default function Hero() {
             className="w-full h-full relative z-10 flex justify-center items-center"
           >
             <img 
-              src="/joker.png" 
+              src={`${import.meta.env.BASE_URL}joker.png`} 
               alt="Joker Persona 5 Protagonist" 
               className="w-[90%] h-full object-contain p5-shadow-black filter drop-shadow(-12px 10px 0px #ff0000)"
             />
