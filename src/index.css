@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Red+Hat+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-marker: 'Permanent Marker', cursive;
+  --font-mono-p5: 'Red Hat Mono', monospace;
+  
+  --color-p5-red: #ff0000;
+  --color-p5-red-dark: #cc0000;
+  --color-p5-black: #0d0d0d;
+  --color-p5-black-card: #141414;
+  --color-p5-white: #f3f3f3;
+  --color-p5-yellow: #ffeb3b;
+}
+
+@layer utilities {
+  /* Jagged Clip Paths */
+  .clip-p5-hero-bg {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+  .clip-p5-skew-left {
+    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+  }
+  .clip-p5-skew-right {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  }
+  .clip-p5-card-1 {
+    clip-path: polygon(2% 0%, 98% 3%, 100% 97%, 0% 95%);
+  }
+  .clip-p5-card-2 {
+    clip-path: polygon(0% 4%, 100% 0%, 97% 100%, 3% 96%);
+  }
+  .clip-p5-shard-1 {
+    clip-path: polygon(20% 0%, 100% 40%, 80% 100%, 0% 60%);
+  }
+  .clip-p5-shard-2 {
+    clip-path: polygon(0% 10%, 90% 0%, 100% 80%, 10% 100%);
+  }
+
+  /* Halftone patterns */
+  .p5-halftone-red {
+    background-image: radial-gradient(rgba(255, 0, 0, 0.25) 18%, transparent 19%);
+    background-size: 8px 8px;
+  }
+  .p5-halftone-black {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.45) 18%, transparent 19%);
+    background-size: 10px 10px;
+  }
+  .p5-halftone-white {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.2) 18%, transparent 19%);
+    background-size: 10px 10px;
+  }
+
+  /* Scanline effect */
+  .p5-scanlines {
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 4px;
+  }
+
+  /* Red Drop Shadow for Joker image */
+  .p5-shadow-red {
+    filter: drop-shadow(-15px 10px 0px #ff0000);
+  }
+  
+  .p5-shadow-black {
+    filter: drop-shadow(10px 10px 0px #000000);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border: 3px solid #0d0d0d;
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff4d4d;
+  }
+}
+
+/* Global resets and structure */
+body {
+  background-color: #0d0d0d;
+  color: #f3f3f3;
+  font-family: 'Red Hat Mono', monospace;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Animated Diagonal Background Stripes */
+@keyframes move-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+.p5-stripes-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    #0d0d0d,
+    #0d0d0d 40px,
+    #141414 40px,
+    #141414 80px
+  );
+  animation: move-stripes 20s linear infinite;
+}
+
+/* Glitch animation text */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px -2px 0px #ff0000, -2px 2px 0px #00ffff;
+  }
+  25% {
+    text-shadow: -2px 2px 0px #ff0000, 2px -2px 0px #00ffff;
+  }
+  50% {
+    text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #00ffff;
+  }
+  75% {
+    text-shadow: -2px -2px 0px #ff0000, 2px 2px 0px #00ffff;
+  }
+  100% {
+    text-shadow: 2px -2px 0px #ff0000, -2px 2px 0px #00ffff;
+  }
+}
+
+.animate-glitch {
+  animation: glitch 0.3s steps(2) infinite;
+}
+
+/* Custom card tilts */
+.skew-card-left {
+  transform: rotate(-2deg) skewX(-2deg);
+}
+
+.skew-card-right {
+  transform: rotate(2deg) skewX(2deg);
+}
+
+.skew-card-heavy {
+  transform: rotate(-5deg) skewX(-5deg);
+}
