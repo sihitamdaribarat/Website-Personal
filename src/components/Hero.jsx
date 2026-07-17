@@ -101,7 +101,7 @@ export default function Hero() {
             transition={{ type: 'spring', stiffness: 120, damping: 18, delay: 0.4 }}
             className="bg-p5-black text-p5-white font-mono text-base md:text-lg px-4 py-3 border-l-4 border-p5-yellow max-w-lg mb-8 transform -rotate-1 select-none font-bold shadow-lg"
           >
-            // COGNITIVE PSI INVESTIGATOR & SECURITY ANALYST FROM MEDAN. HARDCORE ENTHUSIAST OF PERSONA 3 RELOAD & PERSONA 5 ROYAL.
+            // COGNITIVE PSI INVESTIGATOR & SECURITY ANALYST FROM MEDAN. ENTHUSIAST OF CTF (CAPTURE THE FLAG).
           </motion.div>
 
           {/* CTA Buttons */}
