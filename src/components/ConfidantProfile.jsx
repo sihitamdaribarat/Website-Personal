@@ -8,7 +8,7 @@ export default function ConfidantProfile() {
     { label: 'ORIGIN', value: 'Medan, Sumatra Utara' },
     { label: 'AFFILIATION', value: 'Phantom Thieves of Hearts' },
     { label: 'ARCANA', value: 'THE FOOL (Cooperation: Rank Max)' },
-    { label: 'PASSION', value: 'Persona 3 Reload & Persona 5 Royal' },
+    { label: 'PASSION', value: 'CTF (Capture The Flag)' },
   ];
 
   return (
